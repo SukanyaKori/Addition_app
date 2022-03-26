@@ -1,38 +1,131 @@
-.App {
+
+
+
+*{
+
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  
+}
+
+.App{
+  font-family: Verdana, Arial, Helvetica, sans-serif;
   text-align: center;
+  padding: 100px;
+  background: rgb(53, 156, 224);
+  color: #fff;
+  
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1{
+  margin-bottom: 30px;
+  font-size: 40px;
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.content input{
+ padding: 12px ;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  font-size: 18px;
+  color: #96897f;
+  text-align: center;
+  margin-top: 40px;
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.content button{
+
+  height: 50px;
+  width: 200px;
+  margin-top: 100px;
+  color:bold black;
+  border-radius: 2rem;
+  background-color: #96897f;
+  box-shadow: 5px 10px ;
+  font-size: 20px;
+
+}
+
+
+.content h2{
+  margin-top: 100px;
+
+}
+
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: black;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px black;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.App .nav{
+
+  text-align: end;
+}
+
+.dark-mode{
+
+  background: #222121;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
