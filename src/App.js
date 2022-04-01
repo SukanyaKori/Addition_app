@@ -5,8 +5,8 @@ import './App.css';
 function App() {
  
 
-  const[number1,setNumber1]= useState()
-  const[number2,setNumber2]= useState()
+  const[number1,setNumber1]= useState(0)
+  const[number2,setNumber2]= useState(0)
   const[total,settotal]= useState(number1+number2)
 
 
@@ -30,7 +30,7 @@ function App() {
 
   return (
 
-    
+
     <div className={dark ? "App dark-mode":"App"}>
     <div className="nav">
       <label class="switch">
@@ -46,7 +46,7 @@ function App() {
 
       <div className="content">
       <h3>{dark?"Dark mode is on":"Light mode is on"}</h3>
-      <input type="number" placeholder="0" value={number1} onChange={e =>setNumber1(+e.target.value)}/> &nbsp; &nbsp;
+      <input type="number" placeholder="0" value={number1 } onChange={e =>setNumber1(+e.target.value)}/> &nbsp; &nbsp;
       <input type="number" placeholder="0" value={number2} onChange={e =>setNumber2(+e.target.value)}/>
       <br/>
 
